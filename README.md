@@ -27,16 +27,21 @@ Before running the monitor, ensure you have the following ready:
 4. Choose **Custom Bot** (自定义机器人), give it a name, and copy the **Webhook URL**.
 
 ### 3. 🦙 Ollama Setup (For AI Summaries)
+
 This monitor relies on [Ollama](https://ollama.com/) to run LLMs locally without sending sensitive evaluation data to third-party APIs.
 
-1. **Install Ollama**: 
-   - Linux: `curl -fsSL https://ollama.com/install.sh | sh`
-   - Windows/macOS: Download from the [official website](https://ollama.com/download).
-2. **Pull and Run the Model**:
-   Open your terminal and run:
-   \`\`\`bash
-   ollama run qwen2.5:3b
-   \`\`\`
+**1. Install Ollama:**
+* **Linux:**
+    ```bash
+    curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
+    ```
+* **Windows/macOS:** Download from the [official website](https://ollama.com/download).
+
+**2. Pull and Run the Model:**
+Open your terminal and run:
+```bash
+ollama run qwen2.5:3b
+```
    *(Wait for the download to finish. You can press `Ctrl+D` to exit the chat prompt, the Ollama service will keep running in the background).*
 3. **Verify API**: Ensure `http://localhost:11434/api/generate` is accessible on your machine.
 
@@ -53,6 +58,7 @@ cd VLA-Eval-Monitor
 # Install requests library
 pip install requests
 \`\`\`
+
 *(Optional) You can save `requests>=2.25.0` into a `requirements.txt` file and run `pip install -r requirements.txt`.*
 
 ---
