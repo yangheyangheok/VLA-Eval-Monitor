@@ -53,7 +53,7 @@ ollama run qwen2.5:3b
 Clone the repository and install the required dependencies:
 
 ```bash
-git clone https://github.com/your-username/VLA-Eval-Monitor.git
+git clone https://github.com/DesmondYh/VLA-Eval-Monitor.git
 cd VLA-Eval-Monitor
 
 # Install requests library
