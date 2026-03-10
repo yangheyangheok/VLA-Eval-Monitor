@@ -43,7 +43,8 @@ Open your terminal and run:
 ollama run qwen2.5:3b
 ```
    *(Wait for the download to finish. You can press `Ctrl+D` to exit the chat prompt, the Ollama service will keep running in the background).*
-3. **Verify API**: Ensure `http://localhost:11434/api/generate` is accessible on your machine.
+   
+**3. Verify API**: Ensure `http://localhost:11434/api/generate` is accessible on your machine.
 
 ---
 
@@ -51,15 +52,13 @@ ollama run qwen2.5:3b
 
 Clone the repository and install the required dependencies:
 
-\`\`\`bash
+```bash
 git clone https://github.com/your-username/VLA-Eval-Monitor.git
 cd VLA-Eval-Monitor
 
 # Install requests library
 pip install requests
-\`\`\`
-
-*(Optional) You can save `requests>=2.25.0` into a `requirements.txt` file and run `pip install -r requirements.txt`.*
+```
 
 ---
 
@@ -70,16 +69,16 @@ You can run the script directly from your terminal. Use command-line arguments t
 ### Basic Run
 If you are using the default settings (Libero-10, 50 episodes per task, local Ollama):
 
-\`\`\`bash
+```bash
 python vlamonitor.py \
   --dir "/path/to/your/eval_results/libero_10" \
   --webhook "https://open.feishu.cn/open-apis/bot/v2/hook/YOUR-WEBHOOK-TOKEN"
-\`\`\`
+```
 
 ### Advanced Configuration
 Customize parameters for different datasets or models:
 
-\`\`\`bash
+```bash
 python vlamonitor.py \
   --dir "/data/runs/vla0/eval_libero/libero_10" \
   --webhook "https://open.feishu.cn/open-apis/bot/v2/hook/xxx" \
@@ -88,7 +87,7 @@ python vlamonitor.py \
   --total_tasks 10 \
   --episodes_per_task 50 \
   --interval 300
-\`\`\`
+```
 
 ### Argument Details
 
@@ -109,17 +108,16 @@ python vlamonitor.py \
 Since this is a continuous monitoring tool, you likely want it to keep running even after you disconnect from your SSH session. 
 
 **Using `nohup`:**
-\`\`\`bash
+```bash
 nohup python vlamonitor.py --dir "/your/path" --webhook "your_webhook" > monitor.log 2>&1 &
-\`\`\`
-*To stop it later, find the process ID using `ps aux | grep vlamonitor.py` and kill it (`kill -9 PID`).*
+```
 
 **Using `tmux` or `screen` (Recommended):**
-\`\`\`bash
+```bash
 tmux new -s vla_monitor
 python vlamonitor.py --dir "/your/path" --webhook "your_webhook"
 # Press Ctrl+B, then D to detach. The monitor will keep running.
-\`\`\`
+```
 
 ---
 
@@ -127,7 +125,7 @@ python vlamonitor.py --dir "/your/path" --webhook "your_webhook"
 
 The script is specifically optimized for parsing Libero dataset evaluation outputs. It expects your `--dir` to contain subfolders for each task, each containing a `results.json`:
 
-\`\`\`text
+```text
 libero_10/
 ├── task_1_put_the_apple_in_the_bowl/
 │   ├── results.json
@@ -135,7 +133,7 @@ libero_10/
 ├── task_2_.../
 │   └── results.json
 └── ...
-\`\`\`
+```
 
 ## 🤝 License & Contributing
 This project is licensed under the **MIT License**. 
