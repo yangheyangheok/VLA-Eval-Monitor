@@ -33,7 +33,7 @@ This monitor relies on [Ollama](https://ollama.com/) to run LLMs locally without
 **1. Install Ollama:**
 * **Linux:**
     ```bash
-    curl -fsSL [https://ollama.com/install.sh](https://ollama.com/install.sh) | sh
+    curl -fsSL https://ollama.com/install.sh | sh
     ```
 * **Windows/macOS:** Download from the [official website](https://ollama.com/download).
 
