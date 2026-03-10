@@ -53,6 +53,9 @@ ollama run qwen2.5:3b
 Clone the repository and install the required dependencies:
 
 ```bash
+conda create -n VlaMonitor python=3.8
+conda activate VlaMonitor
+
 git clone https://github.com/DesmondYh/VLA-Eval-Monitor.git
 cd VLA-Eval-Monitor
 
