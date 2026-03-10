@@ -1,18 +1,18 @@
-# 🚀 VLA Eval Monitor (Feishu/Lark Bot)
+# VLA Eval Monitor (Feishu/Lark Bot)
 
 A lightweight Python monitoring tool designed for Vision-Language-Action (VLA) model evaluations. It integrates Ollama for local AI summaries and pushes interactive progress cards to Feishu/Lark.
 轻量级 VLA 模型评测监控工具。结合 Ollama 本地大模型生成智能总结，并自动向飞书推送评测进度与数据卡片。
 
 ---
 
-## ✨ Features
+## Features
 
 - **Real-time Monitoring**: Automatically detects changes in your evaluation directory using MD5 fingerprinting.
 - **Metrics Parsing**: Deeply parses `results.json` from Libero (or similar formats) to calculate individual task success rates and overall evaluation progress.
 - **AI-Powered Insights**: Integrates with local **Ollama** models (default: `qwen2.5:3b`) to auto-generate a concise, intelligent summary of your model's performance.
 - **Feishu / Lark Integration**: Pushes beautiful, interactive Markdown cards directly to your team's chat group.
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 Before running the monitor, ensure you have the following ready:
 
@@ -26,7 +26,7 @@ Before running the monitor, ensure you have the following ready:
 3. Click `Settings` (gear icon) -> `Bots` (群机器人) -> `Add Bot` (添加机器人).
 4. Choose **Custom Bot** (自定义机器人), give it a name, and copy the **Webhook URL**.
 
-### 3. 🦙 Ollama Setup (For AI Summaries)
+### 3. Ollama Setup (For AI Summaries)
 
 This monitor relies on [Ollama](https://ollama.com/) to run LLMs locally without sending sensitive evaluation data to third-party APIs.
 
@@ -48,7 +48,7 @@ ollama run qwen2.5:3b
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repository and install the required dependencies:
 
@@ -62,7 +62,7 @@ pip install requests
 
 ---
 
-## 🚀 Usage
+## Usage
 
 You can run the script directly from your terminal. Use command-line arguments to specify your unique paths and configurations.
 
@@ -103,7 +103,7 @@ python vlamonitor.py \
 
 ---
 
-## 🖥️ Running in the Background (For Servers)
+## Running in the Background (For Servers)
 
 Since this is a continuous monitoring tool, you likely want it to keep running even after you disconnect from your SSH session. 
 
@@ -121,7 +121,7 @@ python vlamonitor.py --dir "/your/path" --webhook "your_webhook"
 
 ---
 
-## 📂 Expected Directory Structure
+## Expected Directory Structure
 
 The script is specifically optimized for parsing Libero dataset evaluation outputs. It expects your `--dir` to contain subfolders for each task, each containing a `results.json`:
 
@@ -135,6 +135,6 @@ libero_10/
 └── ...
 ```
 
-## 🤝 License & Contributing
+## License & Contributing
 This project is licensed under the **MIT License**. 
 Pull requests are welcome! If you want to add support for other datasets (like RLBench, RoboVerse) or other notification platforms (Slack, Discord), feel free to open an issue or submit a PR.
