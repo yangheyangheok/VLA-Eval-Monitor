@@ -4,6 +4,7 @@ A lightweight Python monitoring tool designed for Vision-Language-Action (VLA) m
 轻量级 VLA 模型评测监控工具。结合 Ollama 本地大模型生成智能总结，并自动向飞书推送评测进度与数据卡片。
 
 ---
+<img width="602" height="501" alt="image" src="https://github.com/user-attachments/assets/2aba5cd2-54d2-4c24-8ed1-49320b284e5e" />
 
 ## Features
 
